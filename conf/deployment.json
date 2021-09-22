@@ -15,7 +15,11 @@
                 "libraries": [],
                 "max_retries": 0,
                 "spark_python_task": {
-                    "python_file": "cicd_demo_v3/jobs/01_data_preparation/01_create_dataframes.py"
+                    "python_file": "cicd_demo_v3/jobs/01_data_preparation/01_create_dataframes.py",
+                    "parameters": [
+                        "--conf-file",
+                        "conf/test/sample.json"
+                    ]
                 }
             }
         ]
