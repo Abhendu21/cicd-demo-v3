@@ -35,6 +35,14 @@ jobs:
           pip install -r unit-requirements.txt
           pip install -e .
 
+      - name: Deploy integration test
+        run: |
+          dbx deploy --jobs=job1 --files-only
+
+      - name: Run integration test
+        run: |
+          dbx launch --job=job1 --as-run-submit --trace
+
 #      - name: Run unit tests
 #        run: |
 #          echo "Launching unit tests"
