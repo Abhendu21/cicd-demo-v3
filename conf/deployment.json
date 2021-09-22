@@ -6,13 +6,14 @@
                 "new_cluster": {
                     "spark_version": "7.2.x-cpu-ml-scala2.12",
                     "node_type_id": "Standard_F4s",
-                    "aws_attributes": {
-                        "first_on_demand": 0,
-                        "availability": "SPOT"
-                    },
                     "num_workers": 2
                 },
                 "libraries": [],
+                "email_notifications": {
+                    "on_start": [],
+                    "on_success": [],
+                    "on_failure": []
+                },
                 "max_retries": 0,
                 "spark_python_task": {
                     "python_file": "cicd_demo_v3/jobs/01_data_preparation/01_create_dataframes.py",
