@@ -23,6 +23,6 @@ departmentWithEmployees2 = Row(department=department2, employees=[employee3, emp
 departmentWithEmployees3 = Row(department=department3, employees=[employee5, employee4])
 departmentWithEmployees4 = Row(department=department4, employees=[employee2, employee3])
 
-print('department1 is :: '+department1)
-print('employee2 is :: '+ employee2)
-print('email is :: ' + departmentWithEmployees1.employees[0].email)
+print(department1)
+print(employee2)
+print(departmentWithEmployees1.employees[0].email)
