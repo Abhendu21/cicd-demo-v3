@@ -25,4 +25,4 @@ departmentWithEmployees4 = Row(department=department4, employees=[employee2, emp
 
 print('department1 is :: '+department1)
 print('employee2 is :: '+ employee2)
-print('email is ' + departmentWithEmployees1.employees[0].email)
+print('email is :: ' + departmentWithEmployees1.employees[0].email)
