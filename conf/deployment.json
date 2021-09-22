@@ -4,8 +4,8 @@
             {
                 "name": "job1",
                 "new_cluster": {
-                    "spark_version": "7.3.x-cpu-ml-scala2.12",
-                    "node_type_id": "i3.xlarge",
+                    "spark_version": "7.2.x-cpu-ml-scala2.12",
+                    "node_type_id": "Standard_F4s",
                     "aws_attributes": {
                         "first_on_demand": 0,
                         "availability": "SPOT"
