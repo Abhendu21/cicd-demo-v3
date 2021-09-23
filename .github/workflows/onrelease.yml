@@ -1,0 +1,19 @@
+name: Release pipeline
+
+on:
+  push:
+    tags:
+      - 'b-*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+
+jobs:
+  tagname:
+    name: Check tag name conflict
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/@v1
+      - name: help tag check
+        uses: tsuyoshicho/action-vimhelp-tagname-check@v1
+
+
