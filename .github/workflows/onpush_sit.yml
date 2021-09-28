@@ -31,4 +31,4 @@ jobs:
       - name: Show Git Tag Release
         id: create_info
         run: |
-          echo "$VERSION"
+          echo "the tag name is " $VERSION
