@@ -9,19 +9,19 @@ on:
       - created
   
 jobs:
-  get-tag:
-
+  tagname:
+    name: Check tag name conflict
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 1
-    
     steps:
       - name: checkout
         uses: actions/@v1
       - name: help tag check
         uses: tsuyoshicho/action-vimhelp-tagname-check@v1
-      - name: Get the version
-        id: get_version
-        run: |
-          echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//} \
-          echo "The tag name is ${{ steps.get_version.output.VERSION }}"
+
+
+  tagname:
+    name: Get the version
+    id: get_version
+    run: |
+      echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//} \
+      echo "The tag name is ${{ steps.get_version.output.VERSION }}"
