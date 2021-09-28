@@ -16,6 +16,11 @@ jobs:
       max-parallel: 1
     
     steps:
+      - name: checkout
+        uses: actions/@v1
+      - name: help tag check
+        uses: tsuyoshicho/action-vimhelp-tagname-check@v1
       - name: Get the version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo "The tag name is ${{steps.get_version.output.VERSION}}"
