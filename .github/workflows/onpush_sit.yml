@@ -22,9 +22,8 @@ jobs:
   run-pipeline:
     needs: tagname
     runs-on: ubuntu-latest
-    shell: bash
     steps:
       - name: Get Tag Name
         id: release_info
         run: |
-          echo "::set-env name=VERSION::$(echo ${GITHUB_REF/refs\/tags\//})"
+          echo "hello"
