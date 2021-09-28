@@ -31,4 +31,4 @@ jobs:
       - name: Show Git Tag Release
         id: create_info
         run: |
-          echo "${{ steps.release_info.outputs.VERSION }}"
+          echo "$VERSION"
