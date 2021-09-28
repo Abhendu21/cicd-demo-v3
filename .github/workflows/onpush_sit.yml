@@ -28,7 +28,3 @@ jobs:
         id: release_info
         run: |
           echo "::set-env name=VERSION::$(echo ${GITHUB_REF/refs\/tags\//})"
-      - name: Show Git Tag Release
-        id: create_info
-        run: |
-          echo "the tag name is " $VERSION
