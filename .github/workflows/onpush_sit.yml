@@ -21,11 +21,10 @@ jobs:
 
   run-pipeline:
     needs: tagname
-    id: get_version
     name: Get the tag version
     runs-on: ubuntu-latest
     steps:
       - id: step1
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - id: step2
-        run: echo "The tag name is ${{ steps.get_version.output.VERSION }}"
+        run: echo "The tag name is ${{ steps.step1.output.VERSION }}"
