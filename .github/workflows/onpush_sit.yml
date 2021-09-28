@@ -17,13 +17,3 @@ jobs:
         uses: actions/@v1
       - name: help tag check
         uses: tsuyoshicho/action-vimhelp-tagname-check@v1
-
-
-  run-pipeline:
-    needs: tagname
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get Tag Name
-        id: release_info
-        run: |
-          echo "hello"
