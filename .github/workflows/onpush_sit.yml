@@ -19,9 +19,12 @@ jobs:
         uses: tsuyoshicho/action-vimhelp-tagname-check@v1
 
 
-  tagname:
-    name: Get the version
+  run-pipeline:
+    needs: tagname
     id: get_version
-    run: |
-      echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//} \
-      echo "The tag name is ${{ steps.get_version.output.VERSION }}"
+    name: Get the tag version
+    steps:
+      - id: step1
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+      - id: step2
+        run: echo "The tag name is ${{ steps.get_version.output.VERSION }}"
