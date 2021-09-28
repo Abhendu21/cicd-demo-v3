@@ -25,4 +25,10 @@ jobs:
     shell: bash
     steps:
       - name: Get Tag Name
-        run: echo running on branch ${GITHUB_REF##*/}
+        id: release_info
+        run: |
+          echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+      - name: Show Git Tag Release
+        id: create_info
+        run: |
+          echo ${{ steps.release_info.outputs.VERSION }}
