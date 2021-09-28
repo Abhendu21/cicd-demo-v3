@@ -3,7 +3,7 @@ name: Dev to SIT promotion pipeline
 on:
   push:
     tags:
-      t-*
+      - 't-*''
   release:
     types:
       - created
