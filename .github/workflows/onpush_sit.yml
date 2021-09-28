@@ -23,6 +23,7 @@ jobs:
     needs: tagname
     id: get_version
     name: Get the tag version
+    runs-on: ubuntu-latest
     steps:
       - id: step1
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
